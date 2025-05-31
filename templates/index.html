@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تقييم الاكتئاب - PHQ-9</title>
+</head>
+<body style="direction: rtl; font-family: sans-serif; margin: 40px;">
+
+    <h1>استبيان PHQ-9 لتقييم الاكتئاب</h1>
+    <form method="POST">
+        <label>1. قلة الاهتمام أو المتعة في القيام بالأشياء؟</label><br>
+        <select name="q1">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <label>2. الشعور بالاكتئاب أو اليأس؟</label><br>
+        <select name="q2">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <label>3. صعوبة في النوم أو النوم كثيرًا؟</label><br>
+        <select name="q3">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <label>4. الشعور بالتعب أو انخفاض الطاقة؟</label><br>
+        <select name="q4">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <label>5. فقدان الشهية أو الأكل الزائد؟</label><br>
+        <select name="q5">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <label>6. الشعور بأنك فاشل أو خذلت نفسك أو عائلتك؟</label><br>
+        <select name="q6">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <label>7. صعوبة التركيز على أشياء مثل القراءة أو مشاهدة التلفاز؟</label><br>
+        <select name="q7">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <label>8. الحركة أو التحدث ببطء أو بشكل ملحوظ، أو العكس (توتر زائد)؟</label><br>
+        <select name="q8">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <label>9. التفكير بأنك ستكون أفضل حالًا لو مت أو أذيت نفسك؟</label><br>
+        <select name="q9">
+            <option value="0">0 - أبداً</option>
+            <option value="1">1 - عدة أيام</option>
+            <option value="2">2 - أكثر من نصف الأيام</option>
+            <option value="3">3 - تقريباً كل يوم</option>
+        </select><br><br>
+
+        <button type="submit">عرض التقييم</button>
+    </form>
+
+    {% if result %}
+        <h2>✅ التقييم النهائي: {{ result }}</h2>
+        <p>المجموع: {{ total }}</p>
+        <p><strong>🩺 التوصية:</strong> {{ recommendation }}</p>
+    {% endif %}
+</body>
+</html>
